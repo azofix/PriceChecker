@@ -1,0 +1,14 @@
+config.js 
+
+node_modules/
+
+*.log
+npm-debug.log*
+
+.DS_Store
+
+# Env variables (for the future)
+.env
+.env.local
+
+.vscode/
