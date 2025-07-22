@@ -15,3 +15,19 @@ return new Promise((resolve, reject) => {
         });
     });
 }
+
+function getReminders() {
+    const script = `
+    tell application "Reminders"
+    set itemNames to name of every reminder in list "${REMINDERS_LIST}"
+    end tell
+    `;
+
+    return new Promise((resolve, reject) => { 
+        exec(`osascript -e '${script}'`, (err, stdout) => {
+            else{
+                const items = stdout.trim().split(", ");
+            }
+        });
+    });
+}
